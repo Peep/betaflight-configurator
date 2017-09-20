@@ -24,7 +24,8 @@ function MspHelper () {
     'TBS_SMARTAUDIO': 11,
     'TELEMETRY_IBUS': 12,
     'IRC_TRAMP': 13,
-    'RUNCAM_SPLIT_CONTROL': 14 // support communitate with RunCam Split
+    'RUNCAM_SPLIT_CONTROL': 14, // support communitate with RunCam Split
+    'AVSS': 15
   };
 }
 
@@ -1041,6 +1042,11 @@ MspHelper.prototype.process_data = function(dataHandler) {
             case MSPCodes.MSP_SET_BLACKBOX_CONFIG:
                 console.log("Blackbox config saved");
                 break;
+            case MSPCodes.AVSS_CONFIG:
+                AVSS.supported = (data.readU8() & 1) != 0;
+            case MSPCodes.MSP_SET_AVSS_CONFIG:
+                console.log("Blackbox config saved");
+            break;
             case MSPCodes.MSP_TRANSPONDER_CONFIG:
                 var bytesRemaining = data.byteLength;
                 if (semver.gte(CONFIG.apiVersion, "1.33.0")) {

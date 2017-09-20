@@ -14,7 +14,8 @@ TABS.ports.initialize = function (callback, scrollPosition) {
          {name: 'TELEMETRY_HOTT',       groups: ['telemetry'], sharableWith: ['msp'], notSharableWith: ['peripherals'], maxPorts: 1},
          {name: 'TELEMETRY_SMARTPORT',  groups: ['telemetry'], maxPorts: 1},
          {name: 'RX_SERIAL',            groups: ['rx'], maxPorts: 1},
-         {name: 'BLACKBOX',     groups: ['peripherals'], sharableWith: ['msp'], notSharableWith: ['telemetry'], maxPorts: 1}
+         {name: 'BLACKBOX',     groups: ['peripherals'], sharableWith: ['msp'], notSharableWith: ['telemetry'], maxPorts: 1},
+         {name: 'AVSS',     groups: ['peripherals'], sharableWith: ['msp'], notSharableWith: ['telemetry'], maxPorts: 1}
     ];
 
     if (semver.gte(CONFIG.apiVersion, "1.15.0")) {

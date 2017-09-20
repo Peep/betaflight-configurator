@@ -57,6 +57,7 @@ var ADVANCED_TUNING;
 var SENSOR_CONFIG;
 var COPY_PROFILE;
 var DEFAULT;
+var AVSS;
 
 var FC = {
     resetState: function() {
@@ -296,6 +297,10 @@ var FC = {
             blackboxRateNum:            1,
             blackboxRateDenom:          1,
             blackboxPDenom:             0,
+        };
+
+        AVSS = {
+            supported: false
         };
 
         TRANSPONDER = {

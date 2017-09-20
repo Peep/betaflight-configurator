@@ -152,5 +152,7 @@ var MSPCodes = {
 
     MSP_EEPROM_WRITE:               250,
     MSP_DEBUGMSG:                   253, // Not used
-    MSP_DEBUG:                      254
+    MSP_DEBUG:                      254,
+    MSP_AVSS_CONFIG:                255,
+    MSP_SET_AVSS_CONFIG:        256
 };

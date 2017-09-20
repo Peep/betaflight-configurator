@@ -917,6 +917,9 @@
     "portsFunction_BLACKBOX": {
         "message": "Blackbox logging"
     },
+    "portsFunction_AVSS": {
+        "message": "AVSS"
+    },
     "portsFunction_TBS_SMARTAUDIO": {
         "message": "TBS SmartAudio"
     },
